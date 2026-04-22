@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>브랜드 스토리 - COOKING WORLD</title>
+<link rel="stylesheet" href="css/sub1.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- 헤더 (index.html과 동일) -->
+  <header id="siteHeader">
+    <div class="site-logo" onclick="window.location.href='index.html'">
+      <a href="index.html">COOKING WORLD</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="sub1.html">브랜드</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">브랜드 스토리</a></li>
+            <li><a href="#" onclick="goToPage('brand2')">비전</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="event.preventDefault(); toggleDropdown(this)">레시피</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="goToPage('korean')">한식</a></li>
+            <li><a href="#" onclick="goToPage('western')">양식</a></li>
+            <li><a href="#" onclick="goToPage('chinese')">중식</a></li>
+            <li><a href="#" onclick="goToPage('japanese')">일식</a></li>
+            <li><a href="#" onclick="goToPage('dessert')">디저트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onclick="event.preventDefault(); toggleDropdown(this)">초급가이드</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="goToPage('guide1')">기초 요리</a></li>
+            <li><a href="#" onclick="goToPage('guide2')">도구 사용법</a></li>
+            <li><a href="#" onclick="goToPage('guide3')">재료 손질</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="event.html" onclick="event.preventDefault(); toggleDropdown(this)">Event</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <button onclick="showModal('login')">로그인</button>
+      <button onclick="showModal('signup')">회원가입</button>
+    </div>
+  </header>
+
+ <div class="hero">
+    <figure class="hero__media">
+      <!-- <img src="image/eventmain1.jpg" alt="WOW 메인 프로모션" /> -->
+      <figcaption class="hero__caption">
+        <strong>event</strong>
+        <span>지금 진행중인 이벤트를 확인하고 상품들을 받아가세요!</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="card-item">
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.jpg" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-item">
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-item">
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="front">
+        <img src="image/event01.PNG" alt="">
+      </div>
+      <div class="back">
+        <div class="comment">
+          <b>진행중</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-info">
+        <p>&copy; 2025 COOKING WORLD. All rights reserved.</p>
+        <p>서울특별시 강남구 테헤란로 123 | 대표: 홍길동 | 사업자번호: 123-45-67890</p>
+        <p>고객센터: 1588-0000 | 이메일: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3754585943565443775458585c5e59504058455b531954585a">[email&#160;protected]</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 로그인 모달 -->
+  <div class="popup-modal" id="loginPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('login')">&times;</span>
+      <h2>로그인</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <button onclick="processLogin()">로그인</button>
+    </div>
+  </div>
+
+  <!-- 회원가입 모달 -->
+  <div class="popup-modal" id="signupPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('signup')">&times;</span>
+      <h2>회원가입</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <input type="email" placeholder="이메일">
+      <input type="tel" placeholder="전화번호">
+      <button onclick="processSignup()">가입하기</button>
+    </div>
+  </div>
+
+  <script src="js/sub1.js"></script>
+</body>
+</html>

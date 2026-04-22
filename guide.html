@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>초급가이드 - COOKING WORLD</title>
+<link rel="stylesheet" href="css/guide.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- 헤더 (index.html과 동일) -->
+  <header id="siteHeader">
+    <div class="site-logo" onclick="window.location.href='index.html'">
+      <a href="index.html">COOKING WORLD</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="sub1.html">브랜드</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">브랜드 스토리</a></li>
+            <li><a href="#" onclick="goToPage('brand2')">비전</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="recipe.html" onclick="event.preventDefault(); toggleDropdown(this)">레시피</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="goToPage('korean')">한식</a></li>
+            <li><a href="#" onclick="goToPage('western')">양식</a></li>
+            <li><a href="#" onclick="goToPage('chinese')">중식</a></li>
+            <li><a href="#" onclick="goToPage('japanese')">일식</a></li>
+            <li><a href="#" onclick="goToPage('dessert')">디저트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="guide.html">초급가이드</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="goToPage('guide1')">기초 요리</a></li>
+            <li><a href="#" onclick="goToPage('guide2')">도구 사용법</a></li>
+            <li><a href="#" onclick="goToPage('guide3')">재료 손질</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="event.html" onclick="event.preventDefault(); toggleDropdown(this)">Event</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="goToPage('event1')">진행중 이벤트</a></li>
+            <li><a href="#" onclick="goToPage('event2')">종료된 이벤트</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <button onclick="showModal('login')">로그인</button>
+      <button onclick="showModal('signup')">회원가입</button>
+    </div>
+  </header>
+
+  <!-- 메인 컨텐츠 -->
+  <main class="guide-main">
+    <!-- 타이틀 섹션 -->
+    <section class="guide-title-section">
+      <h1 class="guide-main-title">재료 보관 걱정하지마세요~</h1>
+      <p class="guide-subtitle">올바른 재료 보관법 버리는 식재료 없이 알뜰하게 사용해요!</p>
+    </section>
+
+    <!-- 호버시 이미지 바뀜 -->
+    <section class="guide-content-section">
+      <div class="guide-container">
+        <div class="guide-grid">
+          <div class="guide-card" data-type="당근">
+            <div class="guide-card-image">
+              <span class="star-icon">★</span>
+              <img src="image/guideimg1.jpg" alt="당근">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">당근 보관정보</p>
+                <p class="guide-card-desc">냉장보관 / 3일간 신선도 유지<br>세척 후 밀폐용기 보관 > 5일로 ↑</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="양파">
+            <div class="guide-card-image">
+              <img src="image/guideimg2.jpg" alt="양파">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">양파 보관정보</p>
+                <p class="guide-card-desc">상온보관 / 2주간 신선도 유지<br>통풍 잘되는 곳에 보관</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="호박">
+            <div class="guide-card-image">
+              <img src="image/guideimg3.jpg" alt="호박">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">호박 보관정보</p>
+                <p class="guide-card-desc">냉장보관 / 1주일간 신선도 유지<br>랩으로 싸서 보관</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="토마토">
+            <div class="guide-card-image">
+              <img src="image/guideimg4.jpg" alt="토마토">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">토마토 보관정보</p>
+                <p class="guide-card-desc">상온보관 / 5일간 신선도 유지<br>익은 것은 냉장보관</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="브로콜리">
+            <div class="guide-card-image">
+              <img src="image/guideimg5.jpg" alt="브로콜리">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">브로콜리 보관정보</p>
+                <p class="guide-card-desc">냉장보관 / 4일간 신선도 유지<br>물기 제거 후 보관</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="파프리카">
+            <div class="guide-card-image">
+              <img src="image/guideimg6.jpg" alt="파프리카">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">파프리카 보관정보</p>
+                <p class="guide-card-desc">냉장보관 / 1주일간 신선도 유지<br>비닐 봉지에 넣어 보관</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="버섯">
+            <div class="guide-card-image">
+              <img src="image/guideimg7.jpg" alt="버섯">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">버섯 보관정보</p>
+                <p class="guide-card-desc">냉장보관 / 3일간 신선도 유지<br>종이타올로 싸서 보관</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="상추">
+            <div class="guide-card-image">
+              <img src="image/guideimg8.jpg" alt="상추">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">상추 보관정보</p>
+                <p class="guide-card-desc">냉장보관 / 2일간 신선도 유지<br>물에 담가 보관하면 ↑</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-card" data-type="감자">
+            <div class="guide-card-image">
+              <img src="image/guideimg9.jpg" alt="감자">
+              <div class="guide-card-overlay">
+                <p class="guide-card-title">감자 보관정보</p>
+                <p class="guide-card-desc">상온보관 / 3주간 신선도 유지<br>어둡고 서늘한 곳에 보관</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 더보기 버튼 -->
+      <div class="guide-more-section">
+        <button class="guide-more-btn">더보기</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (index.html과 동일) -->
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-info">
+        <p>&copy; 2025 COOKING WORLD. All rights reserved.</p>
+        <p>서울특별시 강남구 테헤란로 123 | 대표: 홍길동 | 사업자번호: 123-45-67890</p>
+        <p>고객센터: 1588-0000 | 이메일: contact@cookingworld.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 로그인 모달 -->
+  <div class="popup-modal" id="loginPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('login')">&times;</span>
+      <h2>로그인</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <button onclick="processLogin()">로그인</button>
+    </div>
+  </div>
+
+  <!-- 회원가입 모달 -->
+  <div class="popup-modal" id="signupPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('signup')">&times;</span>
+      <h2>회원가입</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <input type="email" placeholder="이메일">
+      <input type="tel" placeholder="전화번호">
+      <button onclick="processSignup()">가입하기</button>
+    </div>
+  </div>
+
+  <script src="js/guide.js"></script>
+</body>
+</html>

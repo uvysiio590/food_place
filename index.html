@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COOKING WORLD</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <header id="siteHeader">
+    <div class="site-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <a href="index.html">COOKING WORLD</a>
+    </div>
+  <nav class="main-nav">
+    <ul>
+      <li>
+      <a href="sub1.html">브랜드</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">브랜드 스토리</a></li>
+      </ul>
+    </li>
+      <li>
+      <a href="recipe.html">레시피</a>
+    </li>
+    <li><a href="guide.html">초급가이드</a></li>
+    <li><a href="event.html">Event</a></li>
+    </ul>
+  </nav>
+    <div class="user-actions">
+        <button onclick="showModal('login')">로그인</button>
+        <button onclick="showModal('signup')">회원가입</button>
+    </div>
+  </header>
+
+  <!-- 메인 슬라이더 -->
+  <div class="main-slider">
+      <div class="slider-container" id="sliderContainer">
+          <div class="slide" style="background-image: url('image/mainimg1.jpg');">
+              <div class="slide-content">
+                  <h2>맛있는 레시피의 세계</h2>
+                  <p>당신의 요리를 특별하게</p>
+              </div>
+          </div>
+          <div class="slide" style="background-image: url('image/mainimg2.jpg');">
+              <div class="slide-content">
+                  <h2>요리 대회 개최</h2>
+                  <p>당신의 실력을 뽐내세요</p>
+              </div>
+          </div>
+          <div class="slide" style="background-image: url('image/mainimg3.jpg');">
+              <div class="slide-content">
+                  <h2>다양한 이벤트</h2>
+                  <p>풍성한 혜택이 기다립니다</p>
+              </div>
+          </div>
+      </div>
+      <button class="slider-arrow prev" onclick="moveSlide(-1)">‹</button>
+      <button class="slider-arrow next" onclick="moveSlide(1)">›</button>
+      <div class="slider-nav">
+          <span class="slider-dot active" onclick="goToSlide(0)"></span>
+          <span class="slider-dot" onclick="goToSlide(1)"></span>
+          <span class="slider-dot" onclick="goToSlide(2)"></span>
+      </div>
+  </div>
+
+  <div class="infinite-slider-section">
+    <div class="infinite-slider" id="infiniteSlider1">
+      <div class="slider-item">Korean food</div>
+      <div class="slider-item">Western food</div>
+      <div class="slider-item">Chinese food</div>
+      <div class="slider-item">Japanese food</div>
+      <div class="slider-item">dessert</div>
+      <div class="slider-item">baking class</div>
+      <div class="slider-item">Korean food</div>
+      <div class="slider-item">Western food</div>
+      <div class="slider-item">Chinese food</div>
+      <div class="slider-item">Japanese food</div>
+      <div class="slider-item">dessert</div>
+      <div class="slider-item">baking class</div>
+    </div>
+  </div>
+  <!-- 레시피 그리드 -->
+<div class="recipe-grid-section">
+  <div class="recipe-grid">
+    <div class="recipe-card" onclick="goToPage('recipe1')">
+      <div class="recipe-thumbnail" style="background-image: url('image/recipe-card1.jpg');"></div>
+      <div class="recipe-details">
+          <h3>김치찌개</h3>
+          <p>집에서 쉽게 만드는 정통 김치찌개</p>
+      </div>
+    </div>
+    <div class="recipe-card" onclick="goToPage('recipe2')">
+        <div class="recipe-thumbnail" style="background-image: url('image/recipe-card2.jpg');"></div>
+        <div class="recipe-details">
+            <h3>까르보나라</h3>
+            <p>크리미한 이탈리아 파스타</p>
+        </div>
+    </div>
+    <div class="recipe-card" onclick="goToPage('recipe3')">
+        <div class="recipe-thumbnail" style="background-image: url('image/recipe-card3.jpg');"></div>
+        <div class="recipe-details">
+            <h3>마라탕</h3>
+            <p>매콤한 중국식 요리</p>
+        </div>
+    </div>
+    <div class="recipe-card" onclick="goToPage('recipe4')">
+        <div class="recipe-thumbnail" style="background-image: url('image/recipe-card4.jpg');"></div>
+        <div class="recipe-details">
+            <h3>라멘</h3>
+            <p>진한 국물의 일본 라멘</p>
+        </div>
+    </div>
+  </div>
+</div>
+<section class="food-hero">
+  <div class="container_Sec2">
+    <div class="food-bar">
+      <span class="eyebrow">recipe</span>
+      <h2 class="title">오늘 뭐먹지?</h2>
+      <p class="desc">레시피부터 솔루션까지 다 준비해 놨으니까 따라 해보세요.</p>
+      <p class="btn3">레시피 보러가기</p>
+    </div>
+    <div class="stage">
+      <div class="pan-float">
+        <img class="pan" src="image/pan.png" alt="Frying pan with egg">
+        <span class="shadow"></span>
+      </div>
+    </div>
+  </div>
+  <ul class="food-menu">
+    <li><a href="#none"><img src="image/food_meun1.png" alt=""><span>밑반찬</span></a></li>
+    <li class="is-active"><a href="#none"><img src="image/food_meun2.png" alt=""><span>국/탕</span></a></li>
+    <li><a href="#none"><img src="image/food_meun3.png" alt=""><span>면/국수</span></a></li>
+    <li><a href="#none"><img src="image/food_meun4.png" alt=""><span>밥/죽</span></a></li>
+    <li><a href="#none"><img src="image/food_meun5.png" alt=""><span>김치/젓갈/장류</span></a></li>
+    <li><a href="#none"><img src="image/food_meun6.png" alt=""><span>샐러드</span></a></li>
+    <li><a href="#none"><img src="image/food_meun7.png" alt=""><span>퓨전</span></a></li>
+  </ul>
+</section>
+  <div class="double-slider-section">
+    <div class="slider-title-wrapper">
+      <h2 class="slider-title">우리의 식탁은</h2>
+      <div class="slider-subtitle">
+        <p><span class="bold">초등학생도</span> 따라 할 수 있게,</p>
+        <p>배달로 발생하는 어마어마한 <span class="highlight">음식물쓰레기를</span> 줄이고,</p>
+        <p>누가해도 맛있고, <span class="highlight"> 건강한 집밥을 </span> 만들었으면 좋겠어요.</p>
+    </div>
+  </div>
+      
+  <div class="slider-rows-container">
+    <div class="slider-row slider-row-left">
+      <div class="slider-item"><img src="image/gradi1.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi2.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi3.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi4.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi5.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi6.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi1.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi2.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi3.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi4.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi5.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi6.jpg" alt="요리 이미지"></div>
+  </div>
+    <div class="slider-row slider-row-right">
+      <div class="slider-item"><img src="image/gradi7.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi8.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi9.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi10.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi11.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi12.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi7.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi8.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi9.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi10.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi11.jpg" alt="요리 이미지"></div>
+      <div class="slider-item"><img src="image/gradi12.jpg" alt="요리 이미지"></div>
+    </div>
+  </div>
+</div>
+  <!-- 이벤트 섹션 -->
+  <section id="section3" class="ani">  
+  <div class="eventSection">
+    <div class="event-top">  
+      <div class="event-icons">
+        <img src="image/onion.png" alt="양파" class="icon onion">
+        <p>EVENT</p>
+        <img src="image/carrot.png" alt="당근" class="icon carrot">
+      </div>
+      <p class="event-sub">바로 참여하고 푸짐한 상품을 받아가세요!</p>
+    </div>
+    <div class="event-section">
+      <div class="event-header">
+        <h2>진행중인 이벤트</h2>
+      </div>
+    <div class="event-grid">
+        <div class="event-card" onclick="goToPage('event1')">
+            <div class="event-icon">🎉</div>
+            <h3>두근두근<br>연말 파티요리</h3>
+            <p>다가오는 연말에<br>따뜻하게 보낼 요리를 만들어주세요.</p>
+            <button class="event-button">바로보러가기</button>
+        </div>
+        <div class="event-card" onclick="goToPage('event2')">
+            <div class="event-icon">🎁</div>
+            <h3>요린이의 창의적인<br> 요리레시피</h3>
+            <p>당신의 창의적인 레시피로<br>도전하세요.</p>
+            <button class="event-button">바로보러가기</button>
+        </div>
+        <div class="event-card" onclick="goToPage('event3')">
+            <div class="event-icon">🏆</div>
+            <h3>방구석 요리사의<br>요리대회</h3>
+            <p>요리대회에 참가해서<br>푸짐한 상품을 받아가세요.</p>
+            <button class="event-button">바로보러가기</button>
+        </div>
+    </div>
+  </div>
+  </div>
+</section>
+  
+<footer class="site-footer">
+  <div class="footer-wrapper">
+      <div class="footer-info">
+        <p>&copy; 2025 COOKING WORLD. All rights reserved.</p>
+        <p>서울특별시 강남구 테헤란로 123 | 대표: 홍길동 | 사업자번호: 123-45-67890</p>
+        <p>고객센터: 1588-0000 | 이메일: contact@cookingworld.com</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- 로그인 모달 -->
+  <div class="popup-modal" id="loginPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('login')">&times;</span>
+      <h2>로그인</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <button onclick="processLogin()">로그인</button>
+    </div>
+  </div>
+    <!-- 회원가입 모달 -->
+  <div class="popup-modal" id="signupPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('signup')">&times;</span>
+      <h2>회원가입</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <input type="email" placeholder="이메일">
+      <input type="tel" placeholder="전화번호">
+      <button onclick="processSignup()">가입하기</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
