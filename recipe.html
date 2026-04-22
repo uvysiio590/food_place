@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COOKING WORLD</title>
+<link rel="stylesheet" href="css/recipe.css">
+</head>
+<body>
+
+  <header id="siteHeader">
+    <div class="site-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <a href="index.html">COOKING WORLD</a>
+    </div>
+  <nav class="main-nav">
+    <ul>
+      <li>
+      <a href="sub1.html">브랜드</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">브랜드 스토리</a></li>
+      </ul>
+    </li>
+      <li>
+      <a href="recipe.html">레시피</a>
+      <ul class="dropdown-menu">
+        <li><a href="#" onclick="goToPage('korean')">한식</a></li>
+        <li><a href="#" onclick="goToPage('western')">양식</a></li>
+        <li><a href="#" onclick="goToPage('chinese')">중식</a></li>
+        <li><a href="#" onclick="goToPage('japanese')">일식</a></li>
+        <li><a href="#" onclick="goToPage('dessert')">디저트</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="guide.html">초급가이드</a>
+      <ul class="dropdown-menu">
+      </ul>
+    </li>
+    <li>
+      <a href="event.html">Event</a>
+    </li>
+    </ul>
+  </nav>
+    <div class="user-actions">
+        <button onclick="showModal('login')">로그인</button>
+        <button onclick="showModal('signup')">회원가입</button>
+    </div>
+  </header>
+
+  <div class="search">
+    <h2>오늘 뭐 먹지?</h2>
+    <h3>여기서 답을 찾아보세요.</h3>
+    <input type="text" placeholder="요리나 재료를 검색해보세요.">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <main class="grid">
+    <article class="card">
+      <img src="image/salad.jpg" alt="1">
+      <div class="badge">+7</div>
+      <h3 class="title">가볍게 할 샐러드</h3>
+      <p class="desc">매일 먹는 샐러드가 지겹기 시작했다면?</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/tomato.jpg" alt="2">
+      <div class="badge">+9</div>
+      <h3 class="title">토마토 완전정복</h3>
+      <p class="desc">쉽고 실패 없는 토마토의 이야기</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/egg.jpg" alt="3">
+      <div class="badge">+5</div>
+      <h3 class="title">초간단 달걀요리</h3>
+      <p class="desc">칼질필요없는 초보자전용 달걀요리</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/poteto.jpg" alt="4">
+      <div class="badge">+6</div>
+      <h3 class="title">이색 전 이야기</h3>
+      <p class="desc">이색 전을 만나보세요! </p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/souce.jpg" alt="5">
+      <div class="badge">+7</div>
+      <h3 class="title">소스의 A to Z</h3>
+      <p class="desc">쉽고 실패 없는 집밥 가이드</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/pasta.jpg" alt="6">
+      <div class="badge">+9</div>
+      <h3 class="title">파스타 정복기</h3>
+      <p class="desc">플레이팅부터 모든게 모였다!</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/mushroom.jpg" alt="7">
+      <div class="badge">+7</div>
+      <h3 class="title">가을은 버섯의계절</h3>
+      <p class="desc">지금은 버섯이 가장 맛있을때! </p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/soup.jpg" alt="8">
+      <div class="badge">+6</div>
+      <h3 class="title">집들이 요리 메뉴 추천</h3>
+      <p class="desc">신혼부부를 위한 집들이 요리 가이드</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+    <article class="card">
+      <img src="image/tomato.jpg" alt="9">
+      <div class="badge">+9</div>
+      <h3 class="title">토마토 완전정복</h3>
+      <p class="desc">쉽고 실패 없는 집밥 가이드</p>
+      <a href="#" class="overlay">
+        <span>보러가기</span>
+      </a>
+    </article>
+  </main>
+  <nav class="pagination">
+    <a href="#" aria-label="이전">‹</a>
+    <a class="is-active" href="#">1</a><a href="#">2</a><a href="#">3</a>
+    <a href="#" aria-label="다음">›</a>
+  </nav>
+  
+  <footer class="site-footer">
+    <div class="footer-wrapper">
+      <div class="footer-info">
+        <p>&copy; 2025 COOKING WORLD. All rights reserved.</p>
+        <p>서울특별시 강남구 테헤란로 123 | 대표: 홍길동 | 사업자번호: 123-45-67890</p>
+        <p>고객센터: 1588-0000 | 이메일: contact@cookingworld.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 로그인 모달 -->
+  <div class="popup-modal" id="loginPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('login')">&times;</span>
+      <h2>로그인</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <button onclick="processLogin()">로그인</button>
+    </div>
+  </div>
+    <!-- 회원가입 모달 -->
+  <div class="popup-modal" id="signupPopup">
+    <div class="modal-box">
+      <span class="close-button" onclick="hideModal('signup')">&times;</span>
+      <h2>회원가입</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <input type="email" placeholder="이메일">
+      <input type="tel" placeholder="전화번호">
+      <button onclick="processSignup()">가입하기</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js.recipt.js"></script>
+</body>
+</html>
