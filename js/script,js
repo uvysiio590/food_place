@@ -1,0 +1,85 @@
+$(function(){
+  
+  let ani = $(".ani");
+
+  //스크롤이벤트
+  $.fn.scrollMoving = function(){
+    let elementTop = $(this).offset().top; 
+    let elementBottom = elementTop + $(this).outerHeight(); 
+    let viewportTop = $(window).scrollTop(); 
+    let viewportBottom = viewportTop + $(window).height(); 
+    return (viewportTop < elementBottom) && (elementTop < viewportBottom);
+  };
+  
+  $(window).on('load scroll',function(){
+    ani.each(function(){
+      if($(this).scrollMoving()){
+        $(this).addClass("moving");
+      }else{
+        // 한번 나타난 요소는 사라지지 않도록 수정
+        // $(this).removeClass("moving"); // 이 줄 주석처리 또는 삭제
+      };
+    });
+  });
+  
+
+  // 무한 슬라이더 초기화
+  initInfiniteSlider();
+  
+});
+
+// 무한 슬라이더 함수들
+function initInfiniteSlider() {
+    const topSlider = document.querySelector('.top-slider');
+    const bottomSlider = document.querySelector('.bottom-slider');
+
+    function setupInfiniteSlider(slider) {
+        slider.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+
+        slider.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+    }
+
+    if (topSlider) {
+        setupInfiniteSlider(topSlider);
+    }
+
+    if (bottomSlider) {
+        setupInfiniteSlider(bottomSlider);
+    }
+
+    const images = document.querySelectorAll('.slide-item img');
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = 'https://via.placeholder.com/400x300/ff6b35/ffffff?text=Food+Image';
+        });
+    });
+    
+    adjustSliderSpeed();
+}
+
+function adjustSliderSpeed() {
+    const topSlider = document.querySelector('.top-slider');
+    const bottomSlider = document.querySelector('.bottom-slider');
+    const windowWidth = window.innerWidth;
+
+    let duration = '40s';
+    if (windowWidth < 768) {
+        duration = '30s';
+    }
+    if (windowWidth < 480) {
+        duration = '25s';
+    }
+
+    if (topSlider) {
+        topSlider.style.animationDuration = duration;
+    }
+    if (bottomSlider) {
+        bottomSlider.style.animationDuration = duration;
+    }
+}
+
+window.addEventListener('resize', adjustSliderSpeed);

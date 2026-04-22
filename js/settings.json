@@ -1,0 +1,17 @@
+{
+  "liveServer.settings.CustomBrowser": "chrome",
+  "files.autoSave": "afterDelay",
+  "emmet.variables": {
+    "lang": "ko"
+  },
+  "editor.mouseWheelZoom": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.wordWrap": "on",
+  "diffEditor.wordWrap": "on",
+  "notebook.output.wordWrap": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "javascript.preferences.quoteStyle": "single",
+  "liveServer.settings.donotShowInfoMsg": true
+}
+  
